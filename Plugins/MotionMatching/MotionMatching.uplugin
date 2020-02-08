@@ -1,0 +1,28 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "MotionMatching",
+	"Description": "Motion Matching",
+	"Category": "Other",
+	"CreatedBy": "Anton Malytskyi",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "MotionMatching",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+        {
+            "Name": "MotionMatchingEditor",
+            "Type": "Editor",
+            "LoadingPhase": "Default"
+        }
+	]
+}
