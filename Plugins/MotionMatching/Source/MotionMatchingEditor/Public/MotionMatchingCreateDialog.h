@@ -13,7 +13,7 @@ public:
     
     void Construct(const FArguments& InArgs);
     // Sets properties for the supplied MotionFieldFactory
-    bool ConfigureProperties(TSharedPtr<struct ImportMotionMatchingData> MotionMatchingData);
+    bool ConfigureProperties(TSharedPtr<struct FImportMotionMatchingData> ImportData);
     
 private:
     FReply OnCancel();
@@ -34,7 +34,7 @@ private:
     TArray<CheckBoxListItem::ListItemPtr>                 BoneItems;
     
     // The factory for which we are setting up properties
-    TSharedPtr<ImportMotionMatchingData> MotionMatchingData;
+    TSharedPtr<struct FImportMotionMatchingData> ImportMotionMatchingData;
     
     FAssetData TargetSkeleton;
     FAssetData TargetAnimation;

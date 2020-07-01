@@ -22,4 +22,4 @@ void FMotionMatchingEditorModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FMotionMatchingEditorModule, MotionMatching)
+IMPLEMENT_MODULE(FMotionMatchingEditorModule, MotionMatchingEditor)

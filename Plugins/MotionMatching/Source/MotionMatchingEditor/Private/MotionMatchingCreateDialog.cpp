@@ -201,7 +201,7 @@ FReply SMotionMatchingCreateDialog::OnOk()
     {
         if(BoneItems[i]->IsChecked())
         {
-            MotionMatchingData->TargetMotionBones.Add(BoneItems[i]->GetName());
+            ImportMotionMatchingData->TargetMotionBones.Add(BoneItems[i]->GetName());
         }
     }
     
@@ -219,8 +219,8 @@ FReply SMotionMatchingCreateDialog::OnOk()
         return FReply::Handled();
     }
     
-    MotionMatchingData->TargetSkeleton = Cast<USkeleton>(TargetSkeleton.GetAsset());
-    MotionMatchingData->TargetAnimation = Cast<UAnimSequence>(TargetAnimation.GetAsset());
+    ImportMotionMatchingData->TargetSkeleton = Cast<USkeleton>(TargetSkeleton.GetAsset());
+    ImportMotionMatchingData->TargetAnimation = Cast<UAnimSequence>(TargetAnimation.GetAsset());
     
     CloseDialog(true);
     return FReply::Handled();
@@ -232,9 +232,9 @@ FReply SMotionMatchingCreateDialog::OnCancel()
     return FReply::Handled();
 }
 
-bool SMotionMatchingCreateDialog::ConfigureProperties(TSharedPtr<ImportMotionMatchingData> MotionMatchingData)
+bool SMotionMatchingCreateDialog::ConfigureProperties(TSharedPtr<FImportMotionMatchingData> ImportData)
 {
-    this->MotionMatchingData = MotionMatchingData;
+    this->ImportMotionMatchingData = ImportData;
     
     TSharedRef<SWindow> Window = SNew(SWindow)
         .Title(LOCTEXT("Motion Matrching Options", "Motion Matching"))

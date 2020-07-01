@@ -9,13 +9,13 @@ UMotionMatchingFactory::UMotionMatchingFactory(const FObjectInitializer& ObjectI
 {
     bCreateNew = true;
     SupportedClass = UMotionMatchingData::StaticClass();
-    MotionMatchingData = MakeShareable(new ImportMotionMatchingData());
+    ImportMotionMatchingData = MakeShareable(new FImportMotionMatchingData());
 }
 
 bool UMotionMatchingFactory::ConfigureProperties()
 {
     TSharedRef<SMotionMatchingCreateDialog> Dialog = SNew(SMotionMatchingCreateDialog);
-    return Dialog->ConfigureProperties(MotionMatchingData);
+    return Dialog->ConfigureProperties(ImportMotionMatchingData);
 }
 
 UObject* UMotionMatchingFactory::FactoryCreateNew(UClass* InClass, UObject* InParent, FName InName, EObjectFlags Flags, UObject* Context, FFeedbackContext* Warn)

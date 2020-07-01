@@ -6,10 +6,10 @@
 #include "Factories/Factory.h"
 #include "MotionMatchingFactory.generated.h"
 
-struct ImportMotionMatchingData
+struct FImportMotionMatchingData
 {
     class USkeleton*        TargetSkeleton;
-    class UAnimSequence*   TargetAnimation;
+    class UAnimSequence*    TargetAnimation;
     TArray<FName>           TargetMotionBones;
 };
 
@@ -25,5 +25,5 @@ public:
     virtual bool ConfigureProperties();
     
 private:
-    TSharedPtr<ImportMotionMatchingData> MotionMatchingData;
+    TSharedPtr<FImportMotionMatchingData> ImportMotionMatchingData;
 };
